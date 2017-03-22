@@ -9,6 +9,9 @@ dependencies {
 	compile 'org.apache.commons:commons-lang3:3.3.2'
 	testCompile 'junit:junit:4.12'
 }
+test {
+    testLogging.showStandardStreams = true
+}
 
 sourceSets {
 	main.java.srcDir 'src/main'
@@ -17,11 +20,11 @@ sourceSets {
 
 jar {
 	from configurations.compile.collect { zipTree it }
-	manifest.attributes 'Main-Class': 'xyz.cescoferraro.java.Main'
+	manifest.attributes 'Main-Class': 'xyz.cescoferraro.java.GeometryLib'
 }
 
 task run(type: JavaExec, dependsOn: classes) {
-	main 'xyz.cescoferraro.java.Main'
+	main 'xyz.cescoferraro.java.GeometryLib'
 	classpath sourceSets.main.runtimeClasspath
 	args 'Hello World'
 }
