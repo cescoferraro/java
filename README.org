@@ -1,0 +1,76 @@
+#+TITLE: Java Playground
+#+OPTIONS: toc:nil f:nil 
+
+
+* Languages 
+** Python
+*** Hello world example! 
+    I learned python a while ago. It's really cool!
+    #+begin_src python :session :result output :exports both
+    def foo(x):
+      if x>0:
+        return x+1
+      else:
+        return x-1
+
+    foo(102)
+    #+end_src
+
+    #+RESULTS:
+    : 103
+
+
+** Java
+*** Java simple program
+    Java is the language my university choose to based its course upon.
+    It's a must learn for me!
+    #+HEADERS: :classname HelloWorld 
+    #+begin_src java  :results output :exports both
+      public class HelloWorld {
+          public static void main(String[] args) {
+              System.out.println("Hello, World");
+          }
+      }
+    #+end_src
+
+    #+RESULTS:
+    : Hello, World
+
+*** Another java program
+    Yeah! Lots of java blocks!
+    #+HEADERS: :classname HelloWorld 
+    #+begin_src java  :results output :exports both
+    public class HelloWorld {
+        public static void main(String[] args) {
+            System.out.println("This is amazing!!");
+        }
+    }
+    #+end_src
+
+    #+RESULTS:
+    : This is amazing!!
+
+
+** Golang
+*** Hello World
+  Passwords! File access control! \alpha = \beta
+  #+begin_src go  :results output :exports both 
+    package main
+
+    import "fmt"
+
+    func swap(x, y string) (string, string) {
+	    for _, elt := range []string{"a", "b"} {
+		    fmt.Println(elt)
+	    }
+	    return y, x
+    }
+
+    func main() {
+	    fmt.Println(34538945)
+    }
+
+  #+end_src
+
+  #+RESULTS:
+  : 34538945

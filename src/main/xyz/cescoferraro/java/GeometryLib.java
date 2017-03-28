@@ -1,13 +1,11 @@
 package xyz.cescoferraro.java;
-import java.util.Arrays;
-
-import org.apache.commons.lang3.StringUtils;
 
 public class GeometryLib {
 
     public static void main(String[] args) {
         System.out.println("Class GeometryLib constructed!");
     }
+
     // Areas
     public Double LozengeArea(Double diagonalA, Double diagonalB) {
         return (diagonalA * diagonalB) / 2.0;
@@ -37,20 +35,20 @@ public class GeometryLib {
 
     // Volumes
     public Double EsphereVolume(Double radius) {
-        return (4 / 3) * Math.pow(radius,3) * Math.PI;
+        return (4 / 3) * Math.pow(radius, 3) * Math.PI;
     }
     public Double CubeVolume(Double side) {
-        return Math.pow(side,3);
+        return Math.pow(side, 3);
     }
     public Double ParallelepipedVolume(Double sideA, Double sideB, Double sideC) {
         return sideA * sideB * sideC;
     }
 
-    public static Double CilinderVolume(Double radius,Double height) {
-        return (height) * Math.pow(radius,2) * Math.PI;
+    public static Double CilinderVolume(Double radius, Double height) {
+        return (height) * Math.pow(radius, 2) * Math.PI;
     }
 
-    public Double ConeVolume(Double radius,Double height) {
-	return GeometryLib.CilinderVolume(radius,height)/3;
+    public Double ConeVolume(Double radius, Double height) {
+        return GeometryLib.CilinderVolume(radius, height) / 3;
     }
 }
