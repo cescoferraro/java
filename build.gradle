@@ -3,7 +3,9 @@ repositories {
 }
 
 
+
 apply plugin: 'java'
+
 
 dependencies {
 	compile 'org.apache.commons:commons-lang3:3.3.2'
@@ -18,13 +20,16 @@ sourceSets {
 	test.java.srcDir 'src/test'
 }
 
+
+
 jar {
 	from configurations.compile.collect { zipTree it }
-	manifest.attributes 'Main-Class': 'xyz.cescoferraro.java.GeometryLib'
+	manifest.attributes 'Main-Class': 'xyz.cescoferraro.java.PascoaTask'
 }
 
 task run(type: JavaExec, dependsOn: classes) {
-	main 'xyz.cescoferraro.java.GeometryLib'
+	standardInput = System.in
+	main 'xyz.cescoferraro.java.PascoaTask'
 	classpath sourceSets.main.runtimeClasspath
 	args 'Hello World'
 }
